@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Booking</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <img src="utm.gif" alt="BACKGROUND">
+        </div>
+    </header>
+    <div class="container">
+        <div class="content">
+            <h1>Time to make an <span>Appointment</span></h1>
+            <p>"Your mental health matters deeply, and taking the first step towards care is a sign of strength. Book a confidential counseling appointment today and embark on your path to healing, growth, and a brighter future. Our dedicated professionals are here to support you every step of the way."</p>
+            <button>Read More</button>
+        </div>
+        <div class="form-container">
+            <form id="bookingForm" action="book_appointment.php" method="POST">
+                <div class="form-group">
+                    <label for="counselor">Select Service</label>
+                    <select id="counselor" name="counselor" required>
+                        <option value="">--Select--</option>
+                        <option value="Counselor 1">Counselor 1 (Available)</option>
+                        <option value="Counselor 2">Counselor 2 (Available)</option>
+                        <option value="Counselor 3">Counselor 3 (Available)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="appointmentDate">Select Date</label>
+                    <input type="date" id="appointmentDate" name="appointmentDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="appointmentTime">Select Time</label>
+                    <input type="time" id="appointmentTime" name="appointmentTime" required>
+                </div>
+                <div class="form-group">
+                    <label for="studentname">Enter Name</label>
+                    <input type="text" id="studentname" name="studentname" required>
+                </div>
+                <div class="form-group">
+                    <label for="studentEmail">Enter Email</label>
+                    <input type="email" id="studentEmail" name="studentEmail" required>
+                </div>
+                <button type="submit">Make Appointment</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Counselors Section -->
+    <div class="counselors-section">
+        <h2>Meet Our Counselors</h2>
+        <div class="counselors">
+            <div class="counselor">
+                <img src="ajiq.jpeg" alt="Counselor 1">
+                <h3>Counselor 1</h3>
+                <p>Specializes in stress management and anxiety. With over 10 years of experience, Counselor 1 provides a compassionate and understanding approach to help you navigate life's challenges.</p>
+            </div>
+            <div class="counselor">
+                <img src="hakim.jpeg" alt="Counselor 2">
+                <h3>Counselor 2</h3>
+                <p>Expert in relationship counseling and personal development. Counselor 2 has a warm, empathetic style and is dedicated to helping you achieve personal growth and improved relationships.</p>
+            </div>
+            <div class="counselor">
+                <img src="aqil.jpeg" alt="Counselor 3">
+                <h3>Counselor 3</h3>
+                <p>Focuses on academic counseling and career guidance. With a background in educational psychology, Counselor 3 is passionate about helping students succeed academically and professionally.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

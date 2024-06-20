@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalmCounsel - Dashboard</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 50px;
+            background: #0b0c10;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .card {
+            background: #1f2833;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .grid {
+            display: flex;
+            gap: 20px;
+        }
+        .grid .card {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section id="dashboard" class="section">
+            <h2>Dashboard</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Upcoming Appointments</h3>
+                    <ul id="appointments-list">
+                        <!-- Appointments will be dynamically inserted here -->
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Recent Resources</h3>
+                    <ul>
+                        <li><a href="resource1.pdf">Resource 1</a></li>
+                        <li><a href="resource2.pdf">Resource 2</a></li>
+                        <li><a href="resource3.pdf">Resource 3</a></li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Profile</h3>
+                    <p>Name: Jane Doe</p>
+                    <p>Email: jane.doe@example.com</p>
+                    <a href="#update-profile">Update Profile</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <p>
+        <a href="appt.html">Click here for appointment booking</a>
+    </p>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const appointments = [
+                { date: "2024-06-15", time: "10:00 AM", client: "Naim Fikri" },
+                { date: "2024-06-16", time: "2:00 PM", client: "Danial Syafiq" },
+                { date: "2024-06-17", time: "1:00 PM", client: "Muzammil" }
+            ];
+
+            const appointmentsList = document.getElementById("appointments-list");
+
+            appointments.forEach(appointment => {
+                const li = document.createElement("li");
+                li.textContent = `${appointment.date} - ${appointment.time} with ${appointment.client}`;
+                appointmentsList.appendChild(li);
+            });
+        });
+    </script>
+</body>
+</html>
+
